@@ -1,0 +1,25 @@
+GET http://localhost:4321/authors
+
+### Recuperar una película por id
+GET http://localhost:4321/authors/2
+
+###
+POST http://localhost:4321/authors
+Content-Type: application/json
+
+{
+  "name": "Isabel Allende",
+  "nationality": "Chilena",
+  "birthDate": "1942-08-02"
+}
+
+###
+DELETE http://localhost:4321/authors/4
+
+### Actualizar una película
+PATCH http://localhost:4321/authors/1
+Content-Type: application/json
+
+{
+  "name":"Hola"
+}
