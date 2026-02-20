@@ -1,5 +1,5 @@
-const { Json } = require('sequelize/lib/utils')
-const authors =  require('../Json/autors.json')
+
+const authors =  require('../Json/authors.json')
 const {validateAuthor,validateAuthorPartial} = require('../Schemas/authors')
 
 module.exports.findAll = (req, res) =>{
@@ -30,7 +30,7 @@ module.exports.create = (req, res)=>{
 
     const newAuthor = {
         id:crypto.randomUUID(),
-        ...result.data
+        ...result.data //Para traerme todo de golpe y no estar escribiendo resul.name ....
     }
 
     authors.push(newAuthor)
@@ -45,7 +45,7 @@ module.exports.delete = (req,res)=> {
         return res.status(404).json({message:'Not found'})
     }
 
-    authors.splice(authordelete,1)
+    authors.splice(authordelete,1) //Entra al arreglo de mis autores busca el donde y cuantos
     return res.json({message:'Author delete'})
 }
 

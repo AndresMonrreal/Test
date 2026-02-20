@@ -1,7 +1,7 @@
 GET http://localhost:4321/authors
 
 ### Recuperar una película por id
-GET http://localhost:4321/authors/2
+GET http://localhost:4321/authors/1
 
 ###
 POST http://localhost:4321/authors
@@ -22,4 +22,32 @@ Content-Type: application/json
 
 {
   "name":"Hola"
+}
+
+### Traerme todos los libros
+GET http://localhost:4321/books
+
+### Recuperar una película por id
+GET http://localhost:4321/books/102
+
+###
+POST http://localhost:4321/books
+Content-Type: application/json
+
+{
+  "title": "Isabel Allende",
+  "description": "Chilena",
+  "publishedYear": 2020,
+  "authorId": 3
+}
+
+###
+DELETE http://localhost:4321/books/104
+
+### Actualizar una película
+PATCH http://localhost:4321/books/101
+Content-Type: application/json
+
+{
+  "title":"Hola"
 }
