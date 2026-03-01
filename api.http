@@ -1,7 +1,7 @@
 GET http://localhost:4321/authors
 
-### Recuperar una película por id
-GET http://localhost:4321/authors/1
+### Recuperar una author por id
+GET http://localhost:4321/authors/2
 
 ###
 POST http://localhost:4321/authors

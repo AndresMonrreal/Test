@@ -1,7 +1,7 @@
 
-const books = require('../Json/books.json')
+const books = require('../json/books.json')
 
-const {validateBook,validatePartialBook} = require('../Schemas/book')
+const {validateBook,validatePartialBook} = require('../schemas/book')
 
 module.exports.findAll = (req, res)=>{
     const {Authorid} = req.query

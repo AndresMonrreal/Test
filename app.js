@@ -1,38 +1,30 @@
 const express = require('express')
-const crypto = require('node:crypto')
+const crypto = require('node:crypto') 
 const cors = require('cors')
+const db = require('./models');
 
 //const books = requiere()
 const app = express()
 
 app.disable('x-powered-by') // Para deshabilitar el header X-Powered-By: Express
 app.use(express.json())
-const authorController = require('./controllers/authors-controllers')
-const bookController = require('./controllers/books-controllers')
+const authorRoutes = require('./routes/authors-routes');
+const bookRoutes = require('./routes/books-routes');
 
-app.get('/authors', authorController.findAll)
+app.use(express.json());
 
-app.get('/authors/:id',authorController.getOne)
-
-app.post('/authors', authorController.create)
-
-app.delete('/authors/:id',authorController.delete)
-
-app.patch('/authors/:id',authorController.update)
-
-app.get('/books', bookController.findAll)
-
-app.get('/books/:id', bookController.getOne)
-
-app.post('/books', bookController.create)
-
-app.patch('/books/:id', bookController.update)
-
-app.delete('/books/:id', bookController.delete)
+app.use('/authors', authorRoutes);
+app.use('/books', bookRoutes);
 
 
-const PORT = process.env.PORT ?? 4321
+const PORT = process.env.PORT ?? 4321 
 
+db.sequelize.sync({ force: false })
+  .then(() => {
+    console.log("Tablas sincronizadas en MySQL");
+  })
+  .catch(err => console.log("Error de sync:", err));
+  
 app.listen(PORT,()=>{
     console.log(`server listening on port http://localhost:${PORT}`)
 })
