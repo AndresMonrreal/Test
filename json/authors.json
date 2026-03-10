@@ -3,24 +3,24 @@
     "id": 1,
     "name": "Gabriel García Márquez",
     "nationality": "Colombiano",
-    "birthDate": "1927-03-06"
+    "birthDay": "1927-03-06"
   },
   {
     "id": 2,
     "name": "Isabel Allende",
     "nationality": "Chilena",
-    "birthDate": "1942-08-02"
+    "birthDay": "1942-08-02"
   },
   {
     "id": 3,
     "name": "Juan Rulfo",
     "nationality": "Mexicano",
-    "birthDate": "1917-05-16"
+    "birthDay": "1917-05-16"
   },
   {
     "id": 4,
     "name": "Jorge Luis Borges",
     "nationality": "Argentino",
-    "birthDate": "1899-08-24"
+    "birthDay": "1899-08-24"
   }
 ]

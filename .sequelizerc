@@ -1,0 +1,10 @@
+//Este archivo es para configurar las rutas de los archivos de Sequelize, como el archivo de configuración
+//,los modelos, los seeders y las migraciones. Esto es útil para mantener una estructura organizada en el proyecto y facilitar el acceso a estos archivos desde cualquier parte del código.
+const path = require('path');
+
+module.exports = {
+  'config': path.resolve('db/config', 'config.json'),
+  'models-path': path.resolve('db/models'),
+  'seeders-path': path.resolve('db/seeders'),
+  'migrations-path': path.resolve('db/migrations')
+};
