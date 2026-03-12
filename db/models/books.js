@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
         publishedYear:{
             type: DataTypes.INTEGER,
             field: 'published_year',
-            allowNnull: false
+            allowNull: false
         },
         authorId: {
             type: DataTypes.INTEGER,
@@ -49,7 +49,8 @@ module.exports = (sequelize, DataTypes) => {
                 return {
                     include:[{
                         model: Models.Author,
-                        attributes: ['id','name']
+                        attributes: ['id','name'],
+                        as: 'Author'
                     }]
                 }
             },

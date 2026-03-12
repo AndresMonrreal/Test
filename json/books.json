@@ -1,72 +1,22 @@
 [
-  {
-    "id": "101",
-    "title": "Cien años de soledad",
-    "description": "La historia de la familia Buendía en el pueblo ficticio de Macondo.",
-    "publishedYear": 1967,
-    "authorId": 1
-  },
-  {
-    "id": "102",
-    "title": "La casa de los espíritus",
-    "description": "Una saga familiar que sigue los movimientos sociales y políticos en Chile.",
-    "publishedYear": 1982,
-    "authorId":2
-  },
-  {
-    "id": "103",
-    "title": "Pedro Páramo",
-    "description": "Un hombre viaja a Comala para buscar a su padre en un pueblo de fantasmas.",
-    "publishedYear": 1955,
-    "authorId": 3
-  },
-  {
-    "id": "104",
-    "title": "El Aleph",
-    "description": "Una colección de cuentos cortos que exploran temas de infinito y laberintos.",
-    "publishedYear": 1949,
-    "authorId":4
-  },
-  {
-    "id": "105",
-    "title": "El amor en los tiempos del cólera",
-    "description": "Una historia de amor eterno entre Florentino Ariza y Fermina Daza.",
-    "publishedYear": 1985,
-    "authorId": 1
-  },
-  {
-    "id": "106",
-    "title": "Eva Luna",
-    "description": "Relatos de una joven huérfana que sobrevive gracias a su talento para contar cuentos.",
-    "publishedYear": 1987,
-    "authorId": 3
-  },
-  {
-    "id": "107",
-    "title": "El llano en llamas",
-    "description": "Colección de relatos que retratan la vida cruda en el campo mexicano.",
-    "publishedYear": 1953,
-    "authorId": 3
-  },
-  {
-    "id": "108",
-    "title": "Ficciones",
-    "description": "Considerada una de las obras más importantes de la literatura universal.",
-    "publishedYear": 1944,
-    "authorId": 4
-  },
-  {
-    "id": "109",
-    "title": "Crónica de una muerte anunciada",
-    "description": "Una novela corta sobre un asesinato por honor en un pueblo caribeño.",
-    "publishedYear": 1981,
-    "authorId": "1"
-  },
-  {
-    "id": "110",
-    "title": "De amor y de sombra",
-    "description": "La historia de dos personas que descubren un crimen político bajo una dictadura.",
-    "publishedYear": 1984,
-    "authorId": 1
-}
-  ]
+  { "id": 101, "title": "Cien años de soledad", "description": "La historia de la familia Buendía.", "publishedYear": 1967, "authorId": 1 },
+  { "id": 102, "title": "La casa de los espíritus", "description": "Saga familiar en Chile.", "publishedYear": 1982, "authorId": 2 },
+  { "id": 103, "title": "Pedro Páramo", "description": "Búsqueda del padre en un pueblo fantasma.", "publishedYear": 1955, "authorId": 3 },
+  { "id": 104, "title": "El Aleph", "description": "Cuentos sobre el infinito y laberintos.", "publishedYear": 1949, "authorId": 4 },
+  { "id": 105, "title": "El amor en los tiempos del cólera", "description": "Historia de amor eterno.", "publishedYear": 1985, "authorId": 1 },
+  { "id": 106, "title": "Rayuela", "description": "Una contranovela que se puede leer de varias formas.", "publishedYear": 1963, "authorId": 5 },
+  { "id": 107, "title": "La ciudad y los perros", "description": "La vida en una academia militar en Lima.", "publishedYear": 1963, "authorId": 6 },
+  { "id": 108, "title": "Como agua para chocolate", "description": "Amor y recetas en la Revolución Mexicana.", "publishedYear": 1989, "authorId": 7 },
+  { "id": 109, "title": "El laberinto de la soledad", "description": "Ensayo sobre la identidad mexicana.", "publishedYear": 1950, "authorId": 8 },
+  { "id": 110, "title": "It", "description": "Un ente maligno acecha al pueblo de Derry.", "publishedYear": 1986, "authorId": 9 },
+  { "id": 111, "title": "Harry Potter y la piedra filosofal", "description": "Un niño descubre que es mago.", "publishedYear": 1997, "authorId": 10 },
+  { "id": 112, "title": "Kafka en la orilla", "description": "Relatos cruzados entre un joven y un anciano.", "publishedYear": 2002, "authorId": 11 },
+  { "id": 113, "title": "Asesinato en el Orient Express", "description": "Hercule Poirot resuelve un crimen en un tren.", "publishedYear": 1934, "authorId": 12 },
+  { "id": 114, "title": "El viejo y el mar", "description": "La lucha de un pescador contra un gran pez.", "publishedYear": 1952, "authorId": 13 },
+  { "id": 115, "title": "La señora Dalloway", "description": "Un día en la vida de una mujer de la alta sociedad.", "publishedYear": 1925, "authorId": 14 },
+  { "id": 116, "title": "La metamorfosis", "description": "Gregor Samsa despierta convertido en insecto.", "publishedYear": 1915, "authorId": 15 },
+  { "id": 117, "title": "Crónica de una muerte anunciada", "description": "Un asesinato por honor en un pueblo.", "publishedYear": 1981, "authorId": 1 },
+  { "id": 118, "title": "Eva Luna", "description": "Relatos de una joven con talento para contar cuentos.", "publishedYear": 1987, "authorId": 2 },
+  { "id": 119, "title": "Ficciones", "description": "Obra maestra de cuentos cortos.", "publishedYear": 1944, "authorId": 4 },
+  { "id": 120, "title": "El resplandor", "description": "Terror en un hotel aislado en las montañas.", "publishedYear": 1977, "authorId": 9 }
+]

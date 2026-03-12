@@ -22,5 +22,71 @@
     "name": "Jorge Luis Borges",
     "nationality": "Argentino",
     "birthDay": "1899-08-24"
+  },
+  {
+    "id": 5,
+    "name": "Julio Cortázar",
+    "nationality": "Argentino",
+    "birthDay": "1914-08-26"
+  },
+  {
+    "id": 6,
+    "name": "Mario Vargas Llosa",
+    "nationality": "Peruano",
+    "birthDay": "1936-03-28"
+  },
+  {
+    "id": 7,
+    "name": "Laura Esquivel",
+    "nationality": "Mexicana",
+    "birthDay": "1950-09-30"
+  },
+  {
+    "id": 8,
+    "name": "Octavio Paz",
+    "nationality": "Mexicano",
+    "birthDay": "1914-03-31"
+  },
+  {
+    "id": 9,
+    "name": "Stephen King",
+    "nationality": "Estadounidense",
+    "birthDay": "1947-09-21"
+  },
+  {
+    "id": 10,
+    "name": "J.K. Rowling",
+    "nationality": "Británica",
+    "birthDay": "1965-07-31"
+  },
+  {
+    "id": 11,
+    "name": "Haruki Murakami",
+    "nationality": "Japonés",
+    "birthDay": "1949-01-12"
+  },
+  {
+    "id": 12,
+    "name": "Agatha Christie",
+    "nationality": "Británica",
+    "birthDay": "1890-09-15"
+  },
+  {
+    "id": 13,
+    "name": "Ernest Hemingway",
+    "nationality": "Estadounidense",
+    "birthDay": "1899-07-21"
+  },
+  {
+    "id": 14,
+    "name": "Virginia Woolf",
+    "nationality": "Británica",
+    "birthDay": "1882-01-25"
+  },
+  {
+    "id": 15,
+    "name": "Franz Kafka",
+    "nationality": "Checoslovaco",
+    "birthDay": "1883-07-03"
   }
 ]

@@ -9,6 +9,7 @@ module.exports = {
   async up (queryInterface, Sequelize) {
     const authors = JSON.parse(fs.readFileSync(path.join(__dirname,'../../json/authors.json')))
     const formattedAuthors = authors.map(author => ({
+      id: author.id,
       name: author.name,
       nationality: author.nationality,
       birth_day: author.birthDay,

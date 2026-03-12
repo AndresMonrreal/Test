@@ -40,6 +40,3 @@ startServer().catch((err) => {
   console.log('Error al iniciar el servidor: ',err)
   process.exit(1)
 })
-
-
-

@@ -27,6 +27,26 @@ module.exports = (sequelize, DataTypes) => {//Aquí se está exportando una func
         tableName: 'authors',
         timestamps: true,
         underscored: true,
+        
+        scopes:{
+               novedades:{
+                order: [['birth_day','DESC']]
+            },
+            conLibros(Models){
+                return {
+                    include:[{
+                        model:Models.Book,
+                        atributtes:['id','name'],
+                        as: 'Books'
+                    }]
+                }
+            },
+            nacionalidad(nacionalidad) {
+                return {
+                    where:{nationality: nacionalidad}
+                }
+            }
+        }
     }
 )
 return Author

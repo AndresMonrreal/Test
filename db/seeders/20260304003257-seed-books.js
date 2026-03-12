@@ -12,7 +12,7 @@ module.exports = {
       description: book.description,//Aquí se está asignando el valor de 'description' del libro original al nuevo objeto formateado, lo que representa la descripción del libro en la base de datos.
       published_year: book.publishedYear,//Aquí se está asignando el valor de 'publishedYear' del libro original al nuevo objeto formateado, lo que representa el año de publicación del libro en la base de datos.
       author_id:book.authorId,//Aquí se está asignando el valor de 'authorId' del libro original al nuevo objeto formateado, lo que representa el identificador del autor asociado con el libro en la base de datos.
-      created_At:new Date(),
+      created_at:new Date(),
       updated_at: new Date()
 
     }))
