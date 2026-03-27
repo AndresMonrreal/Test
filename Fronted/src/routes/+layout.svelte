@@ -3,6 +3,9 @@
   import './layout.css'; 
   import {page} from '$app/stores';
   import {notification} from '$lib/stores/notification.svelte.js';
+  import {auth} from '$lib/stores/auth.svelte.js';
+  import {onMount} from 'svelte';
+  import {goto} from '$app/navigation';
   import favicon from '$lib/assets/favicon.svg';
   import {fly} from 'svelte/transition';
 
@@ -13,6 +16,19 @@
      {href: '/books', label:'Libros'},
      {href: '/authors', label: 'Autores'},
   ]
+
+  // Cargar usuario al iniciar si hay token
+  onMount(() => {
+    if (auth.token) {
+      auth.loadUser()
+    }
+  })
+
+  function handleLogout() {
+    auth.logout()
+    notification.show('success', 'Sesión cerrada exitosamente')
+    goto('/login')
+  }
 
 </script>
 
@@ -30,13 +46,35 @@
 <div class = "min-h-screen flex flex-col bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e]">
 
     <nav class= "border-b border-white/8 px-6">
-      <div class = "max-w-6xl mx-auto flex items-center gap-l">
-        <span class = "font-['Playfair_Display'] text-white/80 font-bold text-lg mr-6 py-4">Library</span>
-        {#each nav as link}
-          <!-- Si la ruta actual es igual a la del enlace entonces se le agrega un borde y se cambia el color del texto, de lo contrario se mantiene el estilo por defecto -->
-          <a href={link.href} class = "px-4 py-4 text-sm border-b-2 transition-all {$page.url.pathname === link.href ?
-        ' border-violet-400 text-white' : 'border-transparent text-white/45 hover:text-white/75'}">{link.label}</a>
-        {/each}
+      <div class = "max-w-6xl mx-auto flex items-center gap-l justify-between">
+        <div class="flex items-center gap-l">
+          <span class = "font-['Playfair_Display'] text-white/80 font-bold text-lg mr-6 py-4">Library</span>
+          {#each nav as link}
+            <!-- Si la ruta actual es igual a la del enlace entonces se le agrega un borde y se cambia el color del texto, de lo contrario se mantiene el estilo por defecto -->
+            <a href={link.href} class = "px-4 py-4 text-sm border-b-2 transition-all {$page.url.pathname === link.href ?
+          ' border-violet-400 text-white' : 'border-transparent text-white/45 hover:text-white/75'}">{link.label}</a>
+          {/each}
+        </div>
+        
+        <!-- Sección de autenticación -->
+        <div class="flex items-center gap-4 py-4">
+          {#if auth.isLoggedIn}
+            <span class="text-white/60 text-sm">{auth.user?.email || 'Usuario'}</span>
+            <button
+              onclick={handleLogout}
+              class="px-4 py-2 text-sm bg-red-600/80 hover:bg-red-600 text-white rounded-lg transition-colors"
+            >
+              Cerrar Sesión
+            </button>
+          {:else}
+            <a href="/login" class="px-4 py-2 text-sm bg-blue-600/80 hover:bg-blue-600 text-white rounded-lg transition-colors">
+              Iniciar Sesión
+            </a>
+            <a href="/register" class="px-4 py-2 text-sm bg-green-600/80 hover:bg-green-600 text-white rounded-lg transition-colors">
+              Registrarse
+            </a>
+          {/if}
+        </div>
       </div>
     </nav>
     <main class = "flex-l p-6 md:p-8">

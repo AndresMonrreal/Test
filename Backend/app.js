@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const crypto = require('node:crypto') 
 const cors = require('cors')
@@ -10,12 +11,14 @@ app.disable('x-powered-by') // Para deshabilitar el header X-Powered-By: Express
 app.use(express.json())
 const authorRoutes = require('./routes/authors-routes');
 const bookRoutes = require('./routes/books-routes');
+const authRoutes = require('./routes/auth-routes');
 
 app.use(express.json());
 app.use(cors());
 
 app.use('/authors', authorRoutes)
 app.use('/books', bookRoutes)
+app.use('/auth', authRoutes)
 app.use(middlewareNotFound)
 app.use(errorHandler)
 

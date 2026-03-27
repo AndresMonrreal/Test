@@ -7,6 +7,7 @@
     import Pagination from '$lib/components/pagination.svelte'
     import ConfirmModal from '$lib/components/ConfirmModal.svelte'
     import { authorSchema, authorSchemaPartial } from '$lib/schemas/author-schema'
+    import ProtectedRoute from '$lib/components/ProtectedRoute.svelte'
 
     let showForm = $state(false)
     let editingId = $state(null)
@@ -71,6 +72,7 @@
 
 <svelte:head><title>Autores</title></svelte:head>
 
+<ProtectedRoute>
 <div class = "flex-1 flex-col lg:flex-row gap-6 w-full max-w-6xl mx-auto">
     <div class="flex-1 flex flex-col gap-4">
         <div class = "flex items-center justify-between">
@@ -187,3 +189,4 @@
         onCancel={() => deleteTarget = null}
     />
 {/if}
+</ProtectedRoute>
