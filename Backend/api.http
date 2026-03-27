@@ -1,0 +1,65 @@
+GET http://localhost:4321/authors?page=4&size=5
+
+###
+GET http://localhost:4321/authors/test-error
+
+###
+GET http://localhost:4321/authors/search?nombre=RAUL
+
+### Recuperar una author por id
+GET http://localhost:4321/authors/1
+
+POST http://localhost:4321/authors
+Content-Type: application/json
+
+{
+ // "name": "Andres Monrreal",
+  "nationality": "Aleman",
+  "birthDay": "1950-08-02"
+}
+
+###
+DELETE http://localhost:4321/authors/4
+
+### Actualizar un author
+PATCH http://localhost:4321/authors/1
+Content-Type: application/json
+
+{
+  "name": "RAUL"
+}
+
+### Traerme todos los libros
+GET http://localhost:4321/books?title=La+casa
+
+###
+GET http://localhost:4321/books/search?title=La+Casa
+
+### Recuperar un libro por id
+GET http://localhost:4321/books/101
+
+###
+POST http://localhost:4321/books
+Content-Type: application/json
+
+{
+
+  "title": "Rodrigo Allende",
+  "description": "Chilena",
+  "publishedYear": 2020,
+  "authorId": 1
+}
+
+###
+DELETE http://localhost:4321/books/105
+
+### Actualizar una libro
+PATCH http://localhost:4321/books/101
+Content-Type: application/json
+
+{
+  "title":"Principito"
+}
+###
+
+GET http://localhost:4321/rutaquenexiste

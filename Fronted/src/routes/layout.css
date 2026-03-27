@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap');
+
+@import "tailwindcss";
+ 
+@theme {
+  --font-display: 'Playfair Display', serif;
+  --font-body:    'DM Sans', sans-serif;
+}
+ 
+@layer base {
+  html, body {
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+ 
